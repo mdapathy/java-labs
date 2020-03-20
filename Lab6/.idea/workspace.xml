@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5c4fb179-2e77-4934-b1e7-6e34860ae933" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZOndQeWJWRLbCRQEhjM9WVbC68" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Lab6" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c4fb179-2e77-4934-b1e7-6e34860ae933" name="Default Changelist" comment="" />
+      <created>1584719095330</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584719095330</updated>
+      <workItem from="1584719103878" duration="11240000" />
+      <workItem from="1584734134716" duration="52000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="526" y="110" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1584732761292">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="526" y="110" width="374" height="582" key="#com.intellij.ide.util.MemberChooser/70.27.1296.741@70.27.1296.741" timestamp="1584732761292" />
+    <state x="451" y="146" width="524" height="509" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1584728231854">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="451" y="146" width="524" height="509" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/70.27.1296.741@70.27.1296.741" timestamp="1584728231854" />
+    <state width="1250" height="245" key="GridCell.Tab.0.bottom" timestamp="1584734186077">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state width="1250" height="245" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1584734186077" />
+    <state width="1250" height="245" key="GridCell.Tab.0.center" timestamp="1584734186076">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state width="1250" height="245" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1584734186076" />
+    <state width="1250" height="245" key="GridCell.Tab.0.left" timestamp="1584734186075">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state width="1250" height="245" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1584734186075" />
+    <state width="1250" height="245" key="GridCell.Tab.0.right" timestamp="1584734186076">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state width="1250" height="245" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1584734186076" />
+    <state x="381" y="89" width="670" height="58" key="search.everywhere.popup" timestamp="1584728194239">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="381" y="89" width="670" height="58" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1584728194239" />
+  </component>
+</project>
