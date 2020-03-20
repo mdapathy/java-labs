@@ -18,7 +18,7 @@ public class UsualIterator implements Iterator<String> {
     private int position = -1;
 
     /**
-     * Constructoe
+     * Constructor
      *
      * @param stringArrayList arrayList of strings
      */
