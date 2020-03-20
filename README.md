@@ -6,4 +6,4 @@
 
 **Lab 4** - Variant 6 Adapter
 
-**Lab 4** - Variant 2 Iterator
+**Lab 5** - Variant 2 Iterator
