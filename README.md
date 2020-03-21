@@ -1,6 +1,6 @@
 # java-labs
 
-
+**Patterns**
 
 **Lab 3** - Variant 2 Composite
 
