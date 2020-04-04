@@ -6,12 +6,12 @@ import java.util.Collection;
 /**
  * Represents a collection of Soldier entities
  */
-public class Army extends GameWorldEntity {
+public class Army implements GameWorldEntity {
 
     /**
      * ArrayList that holds the Soldier entities
      */
-    ArrayList<Soldier> army;
+    ArrayList<Soldier> soldiers;
 
     /**
      * Constructor that creates an ArrayList consisting of soldier instances created with a non-parametric constructor
@@ -19,9 +19,9 @@ public class Army extends GameWorldEntity {
      * @param soldiersAmount amount of random soldiers to be created and stored in ArrayList
      */
     public Army(int soldiersAmount) {
-        this.army = new ArrayList<>(soldiersAmount);
+        this.soldiers = new ArrayList<>(soldiersAmount);
         for (int i = 0; i < soldiersAmount; i++) {
-            army.add(new Soldier());
+            soldiers.add(new Soldier());
         }
     }
 
@@ -31,7 +31,7 @@ public class Army extends GameWorldEntity {
      * @param army collection of soldier entities
      */
     public Army(Collection<Soldier> army) {
-        this.army = new ArrayList<>(army);
+        this.soldiers = new ArrayList<>(army);
     }
 
 
@@ -45,7 +45,7 @@ public class Army extends GameWorldEntity {
         long sum = 0;
         System.out.println("Calculating area for an Army");
         for (Soldier s :
-                army) {
+                soldiers) {
             sum += s.area();
         }
         System.out.println("\n");

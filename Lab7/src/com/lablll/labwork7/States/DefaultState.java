@@ -7,15 +7,18 @@ import com.lablll.labwork7.TextHandle;
  */
 public class DefaultState extends State {
 
+    final private HandleFunction
+            defaultHandle = () -> {
+        System.out.println("Show default interface");
+    };
+
+
     /**
      * Default constructor
      */
     public DefaultState() {
         super();
-        handler.add(() -> {
-            System.out.println("Show default interface  with " + text.describe());
-        });
-
+        handler.add(defaultHandle);
     }
 
     /**
@@ -25,10 +28,13 @@ public class DefaultState extends State {
      */
     public DefaultState(TextHandle textHandle) {
         super(textHandle);
-        handler.add(() -> {
-            System.out.println("Show default interface with " + text.describe());
-        });
+        handler.add(defaultHandle);
 
+    }
+
+    @Override
+    public void enterText(String s) {
+        System.out.println(textHandle.enterText(s));
     }
 
 

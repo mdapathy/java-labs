@@ -5,30 +5,39 @@ import java.util.ArrayList;
 /**
  * Represents a collection of all entities in the game world
  */
-public class World extends GameWorldEntity {
+public class WorldRegion implements GameWorldEntity {
     /**
      * An ArrayList that holds all the objects
      */
-    ArrayList<GameWorldEntity> world = new ArrayList<>(10);
+    ArrayList<GameWorldEntity> gameWorldEntities
+            = new ArrayList<>(10);
+
+
+    public WorldRegion() {
+    }
 
     /**
      * Adds an object to an ArrayList
      *
      * @param entity object to be in stored in arrayList
      */
+    public WorldRegion(GameWorldEntity entity) {
+        gameWorldEntities.add(entity);
+    }
+
     public void add(GameWorldEntity entity) {
-        world.add(entity);
+        gameWorldEntities.add(entity);
     }
 
     @Override
     public long area() {
         long sum = 0;
-        System.out.println("Calculating area for World");
+        System.out.println("Calculating area for WorldRegion ...");
         for (GameWorldEntity s :
-                world) {
+                gameWorldEntities) {
             sum += s.area();
         }
-        System.out.println("\n");
+        System.out.println("...Finished calculating area for WorldRegion");
 
         return sum;
 

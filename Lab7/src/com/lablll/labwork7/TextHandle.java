@@ -5,6 +5,7 @@ package com.lablll.labwork7;
  * of the text currently in use
  */
 public class TextHandle {
+
     /**
      * Size of the font currently in use
      */
@@ -18,6 +19,10 @@ public class TextHandle {
      */
     static final int minFontSize = 2;
 
+    /**
+     * Users input
+     */
+    static StringBuilder input;
 
     /**
      * Default constructor that sets
@@ -25,6 +30,7 @@ public class TextHandle {
      */
     public TextHandle() {
         fontSize = 24;
+        input = new StringBuilder();
     }
 
     /**
@@ -37,6 +43,32 @@ public class TextHandle {
         fontSize = f;
 
     }
+
+    /**
+     * @return users input
+     */
+    public static String getInput() {
+        return input.toString();
+    }
+
+    /**
+     * @return fontsize
+     */
+    public static int getFontSize() {
+        return fontSize;
+    }
+
+
+    /**
+     * Modify input
+     *
+     * @param s string to be added to input
+     */
+    public String enterText(String s) {
+        input.append(s);
+        return input.toString();
+    }
+
 
     /**
      * Increases font size if it doesnt
@@ -67,13 +99,5 @@ public class TextHandle {
         fontSize -= 2;
         return true;
     }
-
-    /**
-     * Describes current text handler's features
-     */
-    public String describe() {
-        return "TextHandler of size " + fontSize;
-    }
-
 
 }

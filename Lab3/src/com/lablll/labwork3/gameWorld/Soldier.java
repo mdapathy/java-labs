@@ -7,7 +7,7 @@ import java.util.Random;
 /**
  * Singular entity of the gaming world representing a soldier
  */
-public class Soldier extends GameWorldEntity {
+public class Soldier implements GameWorldEntity {
     /**
      * Left upper x and y coordinates  of the entity
      */
@@ -47,7 +47,7 @@ public class Soldier extends GameWorldEntity {
      * @return long as the area that the objects takes in square units
      */
     public long area() {
-        System.out.println("Calculating area for a Soldier");
+        System.out.print("\tCalculating area for a Soldier");
         return Math.abs((leftUpperCorner.getValue() - rightLowerCorner.getValue()) * (leftUpperCorner.getKey() - rightLowerCorner.getKey()));
     }
 

@@ -9,13 +9,23 @@ import java.util.ArrayList;
  * the application
  */
 abstract public class State {
+
     /**
-     * Default constructor
+     * TextHandle represents the size of the font currently in use
      */
+    protected TextHandle textHandle;
+    /**
+     * HandleFunction represents the function called on state change
+     */
+    protected ArrayList<HandleFunction> handler;
+
+    abstract public void enterText(String s);
+
     public State() {
-        text = new TextHandle();
+        textHandle = new TextHandle();
         handler = new ArrayList<>(1);
     }
+
 
     /**
      * Constructor with passed textHandler
@@ -23,19 +33,24 @@ abstract public class State {
      * @param textHandle previous textHandler
      */
     public State(TextHandle textHandle) {
-        text = textHandle;
+        this.textHandle = textHandle;
         handler = new ArrayList<>(1);
-
     }
 
     /**
-     * TextHandle represents the size of the font currently in use
+     * @return textHandle
      */
-    protected TextHandle text;
+    public TextHandle getTextHandle() {
+        return textHandle;
+    }
+
     /**
-     * HandleFunction represents the function called on state change
+     * @param textHandle textHandle to be set
      */
-    protected ArrayList<HandleFunction> handler;
+    public void setTextHandle(TextHandle textHandle) {
+        this.textHandle = textHandle;
+    }
+
 
     /**
      * Function that handles the current state of the app
@@ -82,17 +97,10 @@ abstract public class State {
     }
 
     /**
-     * @return textHandle
-     */
-    public TextHandle getText() {
-        return text;
-    }
-
-    /**
      * Describes the state and its textHandler
      */
     final public void describeState() {
-        System.out.println(this.getClass().getSimpleName() + " with " + text.describe());
+        System.out.println(this.getClass().getSimpleName() + " with " + TextHandle.getInput() + "in " + TextHandle.getFontSize() + "font size");
     }
 
 }

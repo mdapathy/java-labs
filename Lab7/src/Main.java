@@ -1,4 +1,5 @@
 import com.lablll.labwork7.Screen;
+import com.lablll.labwork7.States.DefaultState;
 
 public class Main {
     /**
@@ -7,22 +8,28 @@ public class Main {
      * @param args command line arguments
      */
     public static void main(String[] args) {
-        Screen s = new Screen();
-        Screen.menu.picInsertion();
 
-        System.out.println();
-
-        s.toolBar.decreaseFontSize();
+        Screen s = new Screen(new DefaultState());
 
         //changing the reaction on the go
-        Screen.getState().changeHandle(() -> {
-            System.out.println("React differently ");
+        s.changeHandle(() -> {
+            System.out.println("React differently");
         });
+
+        s.addHandle(() -> {
+            System.out.println("React differently x2 \n");
+        });
+
+        s.enterText("Entered in default state,");
+
+        Screen.menu.createTable();
+
+        s.enterText("Entered in create table state, ");
 
         System.out.println();
 
-        Screen.getState().addHandle(() -> {
-            System.out.println("React differently x2 ");
-        });
+        Screen.menu.showMain();
+
+
     }
 }

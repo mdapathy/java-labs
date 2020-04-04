@@ -1,8 +1,7 @@
 package com.lablll.labwork3;
 
 import com.lablll.labwork3.gameWorld.Army;
-import com.lablll.labwork3.gameWorld.Soldier;
-import com.lablll.labwork3.gameWorld.World;
+import com.lablll.labwork3.gameWorld.WorldRegion;
 
 /**
  * Example of the usage of gameWorld package
@@ -10,15 +9,19 @@ import com.lablll.labwork3.gameWorld.World;
 public class Main {
 
     public static void main(String[] args) {
-        World world = new World();
-        Army ourArmy = new Army(2);
-        Army enemiesArmy = new Army(3);
+        WorldRegion earth = new WorldRegion();
+        WorldRegion[] continents = {
+                new WorldRegion(),
+                new WorldRegion(),
+                new WorldRegion(),
+        };
 
-        world.add(ourArmy);
-        world.add(enemiesArmy);
-        world.add(new Soldier());
+        for (WorldRegion w : continents) {
+            w.add(new WorldRegion(new Army(2))); // adding peninsulas and or mainland with armies
+            earth.add(w);
+        }
 
-        world.area();
+        earth.area();
 
     }
 }

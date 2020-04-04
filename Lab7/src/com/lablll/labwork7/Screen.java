@@ -1,9 +1,9 @@
 package com.lablll.labwork7;
 
-import com.lablll.labwork7.States.CreateTableState;
-import com.lablll.labwork7.States.DefaultState;
-import com.lablll.labwork7.States.PicInsertionState;
-import com.lablll.labwork7.States.State;
+import com.lablll.labwork7.States.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * The class that represents the screen of an app
@@ -13,7 +13,9 @@ public class Screen {
     /**
      * State of the app
      */
-    private static State state;
+    protected static State state;
+
+    private static Map<String, State> stateMap;
     /**
      * Menu interface
      */
@@ -21,17 +23,47 @@ public class Screen {
     /**
      * Toolbar interface
      */
-    public ToolBar toolBar;
+    public static ToolBar toolBar;
 
     /**
      * Default constructor that initializes the
      * fields
      */
-    public Screen() {
-        state = new DefaultState();
-        menu = new Menu();
-        toolBar = new ToolBar();
-        state.handle();
+    public Screen(State state) {
+        Screen.menu = new Menu();
+        Screen.toolBar = new ToolBar();
+        initializeStateMap();
+
+        Screen.setState(getSpecificState(state.getClass().toString()));
+    }
+
+    /**
+     * Add text to TextHandle
+     *
+     * @param s string to be added
+     */
+    public void enterText(String s) {
+        state.enterText(s);
+    }
+
+    /**
+     * @param stateName className of desired state
+     * @return state from the map
+     */
+    private static State getSpecificState(String stateName) {
+        return stateMap.get(stateName) == null ?
+                stateMap.get(DefaultState.class.toString()) : stateMap.get(stateName);
+    }
+
+
+    /**
+     * Initializes states in the map
+     */
+    private void initializeStateMap() {
+        stateMap = new HashMap<>();
+        stateMap.put(DefaultState.class.toString(), new DefaultState());
+        stateMap.put(CreateTableState.class.toString(), new CreateTableState());
+        stateMap.put(PicInsertionState.class.toString(), new PicInsertionState());
     }
 
     /**
@@ -45,54 +77,84 @@ public class Screen {
     }
 
     /**
-     * @return state of the app
+     * Changes the apps state and provides the current state with
+     * previous textHandle
+     *
+     * @param str name of the state
      */
-    public static State getState() {
-        return state;
+    private static void modifyState(String str) {
+        State s = getSpecificState(str);
+        s.setTextHandle(state.getTextHandle());
+        setState(s);
+    }
+
+
+    public void changeHandle(HandleFunction handleFunction) {
+        state.changeHandle(handleFunction);
     }
 
 
     /**
+     * Deletes the handleFunction if it was present
+     *
+     * @param h handle to delete
+     * @return true if it was removed
+     */
+    final public boolean deleteHandle(HandleFunction h) {
+        return state.deleteHandle(h);
+    }
+
+
+    /**
+     * Adds function to the list
+     *
+     * @param h handler to add
+     */
+    final public void addHandle(HandleFunction h) {
+        state.addHandle(h);
+    }
+
+    /**
      * Represents the app's menu
      */
-    public class Menu {
+    public static class Menu {
 
         /**
          * Changes the state to table creation
          */
-        public void tableCreation() {
-            Screen.setState(new CreateTableState(Screen.getState().getText()));
+        public void createTable() {
+            modifyState(CreateTableState.class.toString());
         }
+
 
         /**
          * Changes the state to default
          */
-        public void defaultState() {
-            Screen.setState(new DefaultState(Screen.getState().getText()));
+        public void showMain() {
+            modifyState(DefaultState.class.toString());
         }
 
         /**
          * Changes the state to pic insertion
          */
-        public void picInsertion() {
-            Screen.setState(new PicInsertionState(Screen.getState().getText()));
+        public void insertPicture() {
+            modifyState(PicInsertionState.class.toString());
         }
-
 
     }
 
     /**
      * Represents the app's toolbar
      */
-    public class ToolBar {
+    public static class ToolBar {
+
         /**
          * Increases the font size and changes
          * the state to the default one
          */
         public void increaseFontSize() {
-            Screen.getState().getText().increaseFontSize();
-            Screen.setState(new DefaultState(Screen.getState().getText()));
-
+            state.getTextHandle().increaseFontSize();
+            modifyState(DefaultState.class.toString());
         }
 
         /**
@@ -100,8 +162,8 @@ public class Screen {
          * the state to the default one
          */
         public void decreaseFontSize() {
-            Screen.getState().getText().decreaseFontSize();
-            Screen.setState(new DefaultState(Screen.getState().getText()));
+            state.getTextHandle().decreaseFontSize();
+            modifyState(DefaultState.class.toString());
         }
     }
 
