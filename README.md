@@ -18,3 +18,5 @@
 **Lab 7** - Variant 6 State - fixed
 
 **Lab 8** - Variant 6 Singleton
+
+**Lab 9** - Variant 2 Abstract Factory
