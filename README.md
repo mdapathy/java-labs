@@ -4,7 +4,6 @@
 
 # CHECKED 
 
-**Lab 3** - Variant 2 Composite 
 
 **Lab 4** - Variant 6 Adapter
 
@@ -12,11 +11,10 @@
 
 **Lab 6** - Variant 0 Strategy
 
-**Lab 7** - Variant 6 State
-
-**Lab 8** - Variant 6 
-
-
-
 # NOT CHECKED YET
 
+**Lab 3** - Variant 2 Composite - fixed
+
+**Lab 7** - Variant 6 State - fixed
+
+**Lab 8** - Variant 6 
