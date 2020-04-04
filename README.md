@@ -1,8 +1,10 @@
 # java-labs
 
+**Patterns**
 
+# CHECKED 
 
-**Lab 3** - Variant 2 Composite
+**Lab 3** - Variant 2 Composite 
 
 **Lab 4** - Variant 6 Adapter
 
@@ -13,3 +15,8 @@
 **Lab 7** - Variant 6 State
 
 **Lab 8** - Variant 6 
+
+
+
+# NOT CHECKED YET
+
