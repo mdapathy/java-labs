@@ -17,4 +17,4 @@
 
 **Lab 7** - Variant 6 State - fixed
 
-**Lab 8** - Variant 6 Composite
+**Lab 8** - Variant 6 Singleton
