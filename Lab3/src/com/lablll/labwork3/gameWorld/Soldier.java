@@ -2,6 +2,7 @@ package com.lablll.labwork3.gameWorld;
 
 import javafx.util.Pair;
 
+import java.awt.*;
 import java.util.Random;
 
 /**
@@ -9,21 +10,18 @@ import java.util.Random;
  */
 public class Soldier implements GameWorldEntity {
     /**
-     * Left upper x and y coordinates  of the entity
+     * Left upper x and y coordinates  of the entity,
+     * and right lower x and y coordinates of the entity
      */
-    private Pair<Integer, Integer> leftUpperCorner;
-    /**
-     * Right lower x and y coordinates of the entity
-     */
-    private Pair<Integer, Integer> rightLowerCorner;
+    private Point leftUpperCorner, rightLowerCorner;
 
     /**
      * Constructor that creates a soldier with random values as coordinates
      */
     public Soldier() {
         Random rand = new Random();
-        leftUpperCorner = new Pair<>(rand.nextInt(100), rand.nextInt(150));
-        rightLowerCorner = new Pair<>(rand.nextInt(100) + leftUpperCorner.getKey(), rand.nextInt(150) - leftUpperCorner.getValue());
+        leftUpperCorner = new Point(rand.nextInt(100), rand.nextInt(150));
+        rightLowerCorner = new Point(rand.nextInt(100) + leftUpperCorner.x, rand.nextInt(150) - leftUpperCorner.y);
     }
 
     /**
@@ -37,8 +35,8 @@ public class Soldier implements GameWorldEntity {
      * @param y2 right lower y coordinate
      */
     public Soldier(int x1, int y1, int x2, int y2) {
-        leftUpperCorner = new Pair<>(x1, y1);
-        rightLowerCorner = new Pair<>(x2, y2);
+        leftUpperCorner = new Point(x1, y1);
+        rightLowerCorner = new Point(x2, y2);
     }
 
     /**
@@ -48,7 +46,7 @@ public class Soldier implements GameWorldEntity {
      */
     public long area() {
         System.out.print("\tCalculating area for a Soldier");
-        return Math.abs((leftUpperCorner.getValue() - rightLowerCorner.getValue()) * (leftUpperCorner.getKey() - rightLowerCorner.getKey()));
+        return Math.abs((leftUpperCorner.y - rightLowerCorner.y) * (leftUpperCorner.x - rightLowerCorner.x));
     }
 
 
