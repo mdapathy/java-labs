@@ -20,3 +20,5 @@
 **Lab 8** - Variant 6 Singleton
 
 **Lab 9** - Variant 2 Abstract Factory
+
+**Lab 1 JEE** 
