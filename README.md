@@ -1,7 +1,5 @@
 # java-labs
 
-**Patterns**
-
 # CHECKED 
 
 
