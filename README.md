@@ -1,7 +1,5 @@
 # java-labs
 
-# CHECKED 
-
 **Lab 3** - Variant 2 Composite
 
 **Lab 4** - Variant 6 Adapter
@@ -16,7 +14,7 @@
 
 **Lab 9** - Variant 2 Abstract Factory
 
-**Lab 1 JEE** 
+**Lab 1 JEE** - JDBC connection
 
 
 
